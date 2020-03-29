@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
  * Version： V1.0
  */
 @Data
-public class UserInfoDO {
+public class UserInfoLikeDO {
 
     private Long id;
 

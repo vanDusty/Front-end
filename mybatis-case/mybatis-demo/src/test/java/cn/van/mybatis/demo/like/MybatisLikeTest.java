@@ -1,8 +1,8 @@
 package cn.van.mybatis.demo.like;
 
 import cn.van.mybatis.demo.BaseTest;
-import cn.van.mybatis.demo.entity.UserInfoDO;
-import cn.van.mybatis.demo.mapper.UserInfoMapper;
+import cn.van.mybatis.demo.entity.UserInfoLikeDO;
+import cn.van.mybatis.demo.mapper.UserInfoLikeMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import javax.annotation.Resource;
@@ -22,7 +22,7 @@ import java.util.List;
 public class MybatisLikeTest extends BaseTest {
 
     @Resource
-    UserInfoMapper userInfoMapper;
+    UserInfoLikeMapper userInfoLikeMapper;
 
     /**
      * 直接传参法
@@ -30,7 +30,7 @@ public class MybatisLikeTest extends BaseTest {
     @Test
     public void selectTest() {
         String nickName = "%" + "王" + "%";
-        List<UserInfoDO> list = userInfoMapper.selectByKeyWord(nickName);
+        List<UserInfoLikeDO> list = userInfoLikeMapper.selectByKeyWord(nickName);
         log.info("UserList:{}", list);
     }
     /**
@@ -39,7 +39,7 @@ public class MybatisLikeTest extends BaseTest {
     @Test
     public void selectByWordTest() {
         String nickName ="王";
-        List<UserInfoDO> list = userInfoMapper.selectByWord(nickName);
+        List<UserInfoLikeDO> list = userInfoLikeMapper.selectByWord(nickName);
         log.info("UserList:{}", list);
     }
 
@@ -49,7 +49,7 @@ public class MybatisLikeTest extends BaseTest {
     @Test
     public void concatTest() {
         String nickName = "王";
-        List<UserInfoDO> list = userInfoMapper.selectForConcat(nickName);
+        List<UserInfoLikeDO> list = userInfoLikeMapper.selectForConcat(nickName);
         log.info("UserList:{}", list);
     }
 
@@ -59,7 +59,7 @@ public class MybatisLikeTest extends BaseTest {
     @Test
     public void bindTest() {
         String nickName = "王";
-        List<UserInfoDO> list = userInfoMapper.selectForBind(nickName);
+        List<UserInfoLikeDO> list = userInfoLikeMapper.selectForBind(nickName);
         log.info("UserList:{}", list);
     }
 }
