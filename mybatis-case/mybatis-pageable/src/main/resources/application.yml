@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:mysql://47.98.178.84:3306/van_mybatis
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: van_mybatis
+    password: W2hY8X6jbdPFatTm
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: cn.van.mybatis.pageable.entity
+#logging:
+#  level:
+#    cn:
+#      van:
+#        mybatis:
+#          pageable:
+#            mapper: debug
+#1）List用于存放页面中的对象，考虑到通用型，所以不建议使用泛型约束，通过查询语句来获取对象List
+  #
+  #（2）totalPage：总页数，也可以说是最大页数，根据查询出来的总元素数计算可得
+  #
+  #（3）pageSize： 当前页中的对象个数，自行设置
+  #
+  #（4）pageIndex：当前页，自行设置，实际情况是页面传递回来
+  #
+  #（5）num：确定开始页与当前页有页，自行设置
+  #
+  #（6）beginPage：页面下方时显示的开始页
+  #
+  #（7）endPage：页面下方显示的结束页
+  #
+  #（8）totalElm：总元素数，查询语句总结果数
