@@ -1,6 +1,7 @@
 package cn.van.mybatis.demo.like;
 
 import cn.van.mybatis.demo.BaseTest;
+import cn.van.mybatis.demo.entity.UserInfoDO;
 import cn.van.mybatis.demo.entity.UserInfoLikeDO;
 import cn.van.mybatis.demo.mapper.UserInfoLikeMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +15,7 @@ import java.util.List;
  * FileName: MybatisLikeTest
  *
  * @author: Van
- * Date:     2020-02-02 15:49
+ * Date:     2019-06-02 15:49
  * Description: ${DESCRIPTION}
  * Version： V1.0
  */

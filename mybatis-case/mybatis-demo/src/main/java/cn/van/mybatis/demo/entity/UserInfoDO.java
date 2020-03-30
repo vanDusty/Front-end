@@ -2,9 +2,10 @@ package cn.van.mybatis.demo.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
-public class UserInfoLikeDO implements Serializable {
+public class UserInfoDO implements Serializable {
     private Long id;
 
     private String userName;
@@ -89,14 +90,14 @@ public class UserInfoLikeDO implements Serializable {
 
     @Override
     public String toString() {
-        return "UserInfoLikeDO{" +
+        return "UserInfoDO{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
                 ", nickName='" + nickName + '\'' +
                 ", mobile='" + mobile + '\'' +
                 ", email='" + email + '\'' +
-                ", gmtCreate=" + gmtCreate +
+                ", gmtCreate=" + gmtCreate+
                 ", gmtUpdate=" + gmtUpdate +
                 '}';
     }
