@@ -6,7 +6,7 @@ package cn.van.mybatis.pageable.dialect;
  * FileName: Dialect
  *
  * @author: Van
- * Date:     2019-12-28 19:05
+ * Date:     2019-06-28 19:05
  * Description: 数据库方言
  * Version： V1.0
  */

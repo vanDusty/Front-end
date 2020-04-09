@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * FileName: MysqlDialect
  *
  * @author: Van
- * Date:     2019-12-28 19:06
+ * Date:     2019-06-28 19:06
  * Description: Mysql 分页方言
  * Version： V1.0
  */

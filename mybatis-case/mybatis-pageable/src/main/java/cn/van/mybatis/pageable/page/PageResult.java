@@ -8,8 +8,8 @@ import java.util.List;
  * FileName: PageResult
  *
  * @author: Van
- * Date:     2019-12-28 20:05
- * Description: 分页结果
+ * Date:     2019-06-28 20:05
+ * Description: 分页结果集
  * Version： V1.0
  */
 public class PageResult<T> implements Serializable {

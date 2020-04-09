@@ -26,7 +26,7 @@ import java.util.Properties;
  * FileName: PageInterceptor
  *
  * @author: Van
- * Date:     2019-12-28 19:03
+ * Date:     2019-06-28 19:03
  * Description: 分页拦截器
  * Version： V1.0
  */
@@ -153,8 +153,8 @@ public class PageInterceptor implements Interceptor {
     }
 
     private MappedStatement copyPageableMappedStatement(MappedStatement ms, BoundSql boundSql) {
-        PageInterceptor.PageParam pageParm = PARAM_THREAD_LOCAL.get();
-        String pageSql = dialect.getLimitSql(boundSql.getSql(), pageParm.offset, pageParm.limit);
+        PageInterceptor.PageParam pageParam = PARAM_THREAD_LOCAL.get();
+        String pageSql = dialect.getLimitSql(boundSql.getSql(), pageParam.offset, pageParam.limit);
         SqlSource source = new StaticSqlSource(ms.getConfiguration(), pageSql, boundSql.getParameterMappings());
         return copyFromMappedStatement(ms, source);
     }
@@ -211,6 +211,9 @@ public class PageInterceptor implements Interceptor {
     public void setProperties(Properties properties) {
     }
 
+    /**
+     * 分页辅助参数
+     */
     public static class PageParam {
         // 当前页
         int pageNum;
@@ -229,7 +232,7 @@ public class PageInterceptor implements Interceptor {
     }
 
     /**
-     * 开始分页
+     * 供调用的静态分页方法
      *
      * @param pageNum  当前页码(从1开始)
      * @param pageSize 每页长度

@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
  * FileName: UserInfoDO
  *
  * @author: Van
- * Date:     2019-12-28 19:18
+ * Date:     2019-06-28 19:18
  * Description: ${DESCRIPTION}
  * Version： V1.0
  */

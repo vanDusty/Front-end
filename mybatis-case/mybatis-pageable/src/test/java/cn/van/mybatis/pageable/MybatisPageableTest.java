@@ -16,10 +16,10 @@ import java.util.List;
 /**
  * Copyright (C), 2015-2020, 风尘博客
  * 公众号 : 风尘博客
- * FileName: MybatisTest
+ * FileName: MybatisPageableTest
  *
  * @author: Van
- * Date:     2019-07-24 16:15
+ * Date:     2019-06-24 16:15
  * Description: 分页测试
  * Version： V1.0
  */
@@ -33,23 +33,16 @@ public class MybatisPageableTest {
 
     @Test
     public void findAll() {
-        Long start = System.currentTimeMillis();
         List<UserInfoDO> list = userMapper.findAll();
-
-        log.info("总耗时：{} 毫秒", System.currentTimeMillis() - start);
-
         log.info("list:{}", list);
     }
 
     @Test
     public void selectForPage() {
         // 该查询进行分页，指定第几页和每页数量
-        Long start = System.currentTimeMillis();
-
-        PageInterceptor.startPage(2,4);
+        PageInterceptor.startPage(1,4);
         List<UserInfoDO> all = userMapper.findAll();
         PageResult<UserInfoDO> result = new PageResult<>(all);
-        log.info("总耗时：{} 毫秒", System.currentTimeMillis() - start);
         // 分页结果打印
         log.info("总记录数：{}", result.getTotalSize());
         log.info("list：{}", result.getData());
