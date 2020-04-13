@@ -1,6 +1,6 @@
 <h1 align="center"><a href="" target="_blank">Mybatis-Home</a></h1>
 
-> 这里是Van学习 `Mybatis`的笔记，包含[使用示例](/mybatis-case)和[源码解析]()，如果觉得写的还不错，点个✨，谢谢大佬！
+> 这里是Van学习 `Mybatis`的笔记，包含[使用示例](/mybatis-case)和[源码解析（待发布）]()，如果觉得写的还不错，点个✨，谢谢大佬！
 
 <p align="center">
 <img src="https://img.shields.io/badge/language-java-gree.svg" />
@@ -13,13 +13,18 @@
 
 ## [Mybatis 系列目录](https://www.dusty.vip/)
 
-todo ...
+1. Mybatis 整合逆向工程自动生成代码
+1. MyBatis 模糊查询
+1. Mybatis 整合 Druid 监控
+1. Mybatis 分页（分页插件 + 自定义拦截器分页）
+1. Mybatis 配置多数据源最简解决方案
+
 
 ## 我活跃在
 
 1. [风尘博客-个人博客](https://www.dusty.vip/)
 1. [风尘博客-博客园](https://www.cnblogs.com/vandusty)
-1. [风尘博客-掘金](https://juejin.im/user/5d5ea68e6fb9a06afa328f56/posts)
+1. [风尘博客-掘金](https://juejin.im/userInfo/5d5ea68e6fb9a06afa328f56/posts)
 
 最新文章，欢迎关注：公众号-风尘博客；交流观点，欢迎添加：个人微信
 
