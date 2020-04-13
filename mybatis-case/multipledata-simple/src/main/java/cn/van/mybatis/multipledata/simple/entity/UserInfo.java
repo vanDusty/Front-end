@@ -10,11 +10,9 @@
  */
 package cn.van.mybatis.multipledata.simple.entity;
 
-import lombok.Data;
-
 import java.time.LocalDateTime;
 
-public class User {
+public class UserInfo {
     private Long id;
     private String userName;
     private String passWord;

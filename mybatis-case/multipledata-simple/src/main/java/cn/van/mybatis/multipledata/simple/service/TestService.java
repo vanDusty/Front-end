@@ -10,7 +10,7 @@
  */
 package cn.van.mybatis.multipledata.simple.service;
 
-import cn.van.mybatis.multipledata.simple.entity.User;
+import cn.van.mybatis.multipledata.simple.entity.UserInfo;
 
 /**
  * Copyright (C), 2015-2019, 风尘博客
@@ -23,7 +23,7 @@ import cn.van.mybatis.multipledata.simple.entity.User;
  */
 public interface TestService {
     // 插入主库
-    void insertMater(User user);
+    void insertMater(UserInfo userInfo);
     // 插入从库
-    void insertSlave(User user);
+    void insertSlave(UserInfo userInfo);
 }

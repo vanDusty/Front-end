@@ -9,7 +9,7 @@
  * 作者姓名           修改时间           版本号              描述
  */
 package cn.van.mybatis.multipledata.simple;
-import cn.van.mybatis.multipledata.simple.entity.User;
+import cn.van.mybatis.multipledata.simple.entity.UserInfo;
 import cn.van.mybatis.multipledata.simple.service.TestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,21 +39,21 @@ public class MultipleDataTest {
      */
     @Test
     public void insertMater() {
-        User user = new User();
-        user.setUserName("master");
-        user.setPassWord("password");
-        user.setUserSex("男");
-        testService.insertMater(user);
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserName("master");
+        userInfo.setPassWord("password");
+        userInfo.setUserSex("男");
+        testService.insertMater(userInfo);
     }
     /**
      * 往从库（slave） 新增数据
      */
     @Test
     public void insertSlave() {
-        User user = new User();
-        user.setUserName("slave");
-        user.setPassWord("password");
-        user.setUserSex("女");
-        testService.insertSlave(user);
+        UserInfo userInfo = new UserInfo();
+        userInfo.setUserName("slave");
+        userInfo.setPassWord("password");
+        userInfo.setUserSex("女");
+        testService.insertSlave(userInfo);
     }
 }

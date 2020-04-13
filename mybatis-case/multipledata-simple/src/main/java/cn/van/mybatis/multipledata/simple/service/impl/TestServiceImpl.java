@@ -1,9 +1,9 @@
 package cn.van.mybatis.multipledata.simple.service.impl;
 
 
+import cn.van.mybatis.multipledata.simple.entity.UserInfo;
 import cn.van.mybatis.multipledata.simple.mapper.master.User1Mapper;
 import cn.van.mybatis.multipledata.simple.mapper.slave.User2Mapper;
-import cn.van.mybatis.multipledata.simple.entity.User;
 import cn.van.mybatis.multipledata.simple.service.TestService;
 import org.springframework.stereotype.Service;
 
@@ -25,11 +25,11 @@ public class TestServiceImpl implements TestService {
     @Resource
     User2Mapper user2Mapper;
 
-    public void insertMater(User user) {
-        user1Mapper.insert(user);
+    public void insertMater(UserInfo userInfo) {
+        user1Mapper.insert(userInfo);
     }
 
-    public void insertSlave(User user) {
-        user2Mapper.insert(user);
+    public void insertSlave(UserInfo userInfo) {
+        user2Mapper.insert(userInfo);
     }
 }
