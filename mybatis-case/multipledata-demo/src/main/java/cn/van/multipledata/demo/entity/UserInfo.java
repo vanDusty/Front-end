@@ -1,27 +1,24 @@
-package cn.van.mybatis.demo.entity;
+/**
+ * Copyright (C), 2015-2019, XXX有限公司
+ * FileName: User
+ * Author:   zhangfan
+ * Date:     2019-03-29 15:08
+ * Description:
+ * History:
+ * <author>          <time>          <version>          <desc>
+ * 作者姓名           修改时间           版本号              描述
+ */
+package cn.van.multipledata.demo.entity;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
 
-public class UserInfoLikeDO implements Serializable {
+public class UserInfo {
     private Long id;
-
     private String userName;
-
     private String passWord;
-
+    private String userSex;
     private String nickName;
-
-    private String mobile;
-
-    private String email;
-
     private LocalDateTime gmtCreate;
-
-    private LocalDateTime gmtUpdate;
-
-    private static final long serialVersionUID = 1L;
 
     public Long getId() {
         return id;
@@ -47,28 +44,20 @@ public class UserInfoLikeDO implements Serializable {
         this.passWord = passWord;
     }
 
+    public String getUserSex() {
+        return userSex;
+    }
+
+    public void setUserSex(String userSex) {
+        this.userSex = userSex;
+    }
+
     public String getNickName() {
         return nickName;
     }
 
     public void setNickName(String nickName) {
         this.nickName = nickName;
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public LocalDateTime getGmtCreate() {
@@ -79,25 +68,15 @@ public class UserInfoLikeDO implements Serializable {
         this.gmtCreate = gmtCreate;
     }
 
-    public LocalDateTime getGmtUpdate() {
-        return gmtUpdate;
-    }
-
-    public void setGmtUpdate(LocalDateTime gmtUpdate) {
-        this.gmtUpdate = gmtUpdate;
-    }
-
     @Override
     public String toString() {
-        return "UserInfoLikeDO{" +
+        return "User{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
+                ", userSex='" + userSex + '\'' +
                 ", nickName='" + nickName + '\'' +
-                ", mobile='" + mobile + '\'' +
-                ", email='" + email + '\'' +
                 ", gmtCreate=" + gmtCreate +
-                ", gmtUpdate=" + gmtUpdate +
                 '}';
     }
 }

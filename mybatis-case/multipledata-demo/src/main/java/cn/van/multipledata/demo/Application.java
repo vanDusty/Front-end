@@ -1,23 +1,30 @@
 /**
  * Copyright (C), 2015-2019, XXX有限公司
- * FileName: UserApplication
+ * FileName: Application
  * Author:   zhangfan
- * Date:     2019-01-29 17:09
- * Description: 用户模块启动类
+ * Date:     2019-06-14 15:34
+ * Description: 启动类
  * History:
  * <author>          <time>          <version>          <desc>
  * 作者姓名           修改时间           版本号              描述
  */
-package cn.van.mybatis.pagehelper;
+package cn.van.multipledata.demo;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 〈一句话功能简述〉<br> 
+ * 〈启动类〉
+ *
+ * @author zhangfan
+ * @create 2019-06-14
+ * @since 1.0.0
+ */
 @SpringBootApplication
-@MapperScan("cn.van.mybatis.pagehelper.mapper")
+@MapperScan("cn.van.multipledata.demo.mapper")
 public class Application {
-
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
