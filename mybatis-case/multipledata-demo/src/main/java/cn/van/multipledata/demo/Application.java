@@ -14,14 +14,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * 〈一句话功能简述〉<br> 
- * 〈启动类〉
- *
- * @author zhangfan
- * @create 2019-06-14
- * @since 1.0.0
- */
 @SpringBootApplication
 @MapperScan("cn.van.multipledata.demo.mapper")
 public class Application {
