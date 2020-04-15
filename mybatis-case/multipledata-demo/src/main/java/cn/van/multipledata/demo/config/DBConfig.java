@@ -51,9 +51,9 @@ public class DBConfig {
                                        @Autowired(required = false) @Qualifier("slaveDS") DataSource slaveDataSource) {
         DynamicDataSource dynamicDataSource = new DynamicDataSource();
         Map<Object, Object> targetDataSources = new HashMap<Object, Object>();
-        targetDataSources.put(DynamicDSEnum.MASTER, masterDataSource);
+        targetDataSources.put(DynamicDSEnum.MASTER.getDesc(), masterDataSource);
         if (slaveDataSource != null) {
-            targetDataSources.put(DynamicDSEnum.SLAVE, slaveDataSource);
+            targetDataSources.put(DynamicDSEnum.SLAVE.getDesc(), slaveDataSource);
         }
         dynamicDataSource.setTargetDataSources(targetDataSources);
         dynamicDataSource.setDefaultTargetDataSource(masterDataSource);

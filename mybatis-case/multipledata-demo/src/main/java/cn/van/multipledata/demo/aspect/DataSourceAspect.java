@@ -29,7 +29,7 @@ public class DataSourceAspect {
             Method method = this.getMethod(pjp);
             DS DS = method.getAnnotation(DS.class);
             clear = DS.clear();
-            DataSourceContextHolder.set(DS.value());
+            DataSourceContextHolder.set(DS.value().getDesc());
             log.info("========数据源切换至：{}", DS.value().getDesc());
             return pjp.proceed();
         } finally {

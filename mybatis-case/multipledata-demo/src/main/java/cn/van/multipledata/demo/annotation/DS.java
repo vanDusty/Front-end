@@ -10,6 +10,10 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DS {
+    /**
+     * 如果没设置数据源，默认 用 master 库
+     * @return
+     */
     DynamicDSEnum value() default DynamicDSEnum.MASTER;
 
     boolean clear() default true;
