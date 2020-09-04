@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>maven-parent</artifactId>
+        <groupId>cn.van.maven</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>maven-web</artifactId>
+    <packaging>jar</packaging>
+    <name>${artifactId}</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.van.maven</groupId>
+            <artifactId>maven-core</artifactId>
+        </dependency>
+    </dependencies>
+    <!-- 打包插件 多模块打包：只需在启动类所在模块的POM文件：指定打包插件-->
+    <build>
+        <plugins>
+            <plugin>
+                <!--该插件主要用途：构建可执行的JAR -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
